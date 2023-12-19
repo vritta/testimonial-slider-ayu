@@ -36,6 +36,7 @@ const Testimonials = () => {
       {/* {
         reviews.map((review)=><Card key={review.id} data={review}/>)
       } */}
+      
       <Card data={reviews[index]}/>
       
       <div className='flex text-3xl mt-9 gap-3 font-bold justify-center text-violet-400'>
