@@ -8,36 +8,27 @@ const Card = (props) => {
   let text = props.data.text;
 
   return (
-    <div>
-      <div>
-        <img src={image} alt="" />
+    <div className='flex flex-col md:relative'>
+      <div className='absolute top-[-7rem] mx-auto z-[20]'>
+        <img className="aspect-square rounded-full w-[140px] h-[140px]"
+        src={image} alt="" />
+        <div className='w-[140px] h-[140px] bg-violet-500 rounded-full
+        absolute top-[-6px] left-[10px] z-[-10]'></div>
       </div>
 
-      <div>
-        <p>{name}</p>
+      <div className='text-center mt-7'>
+        <p className='tracking-wider font-bold text-2xl capitalize'>{name}</p>
+        <p className='text-violet-300 uppercase text-sm'>{job}</p>
       </div>
 
-      <div>
-        <p>{job}</p>
-      </div>
-
-      <div>
+      <div className='text-violet-500 mt-5 mx-auto'>
         <FaQuoteLeft/>
       </div>
-      <div>
+      <div className='text-center mt-4 text-slate-500'>
         <p>{text}</p>
       </div>
-      <div>
+      <div className='text-violet-400 mx-auto mt-5'>
         <FaQuoteRight/>
-      </div>
-
-      <div>
-        <button>+</button>
-        <button>+</button>
-      </div>
-
-      <div>
-        <button>Surprise Me</button>
       </div>
     </div>
   )
